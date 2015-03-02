@@ -133,8 +133,9 @@ Parser
 
 - Method name: `setParserHashAlgo()`
 - Default value: `sha256`
-- Argument value: any value returned by the function `hash_algos()` (string)
+- Argument value: any value returned by the function `hash_algos()` or `none` (string)
 - See: http://php.net/hash_algos
+- Use `none` to use original item id
 
 ```php
 $config->setParserHashAlgo('sha1');
