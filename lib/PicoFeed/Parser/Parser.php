@@ -88,7 +88,7 @@ abstract class Parser
      * @var array
      */
     private $grabber_ignore_urls = array();
-
+    
     /**
      * Constructor
      *
@@ -272,7 +272,12 @@ abstract class Parser
      */
     public function generateId()
     {
-        return hash($this->hash_algo, implode(func_get_args()));
+        if ($this->hash_algo === 'none') {
+            return func_get_arg(0);
+        }
+        else {
+            return hash($this->hash_algo, implode(func_get_args()));
+        }
     }
 
     /**
