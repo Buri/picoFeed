@@ -88,7 +88,7 @@ abstract class Parser
      * @var array
      */
     private $grabber_ignore_urls = array();
-    
+
     /**
      * Constructor
      *
